@@ -13,7 +13,7 @@
                     <el-icon :size="48"><Monitor /></el-icon>
                 </div>
                 <h1>AI 助手</h1>
-                <p class="subtitle">智能桌面助手 v1.0.0</p>
+                <p class="subtitle">智能桌面助手 v1.0.1</p>
             </div>
 
             <!-- 登录表单 -->

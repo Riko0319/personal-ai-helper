@@ -155,7 +155,7 @@ import { clearUserCache, getCurrentUser } from '@/utils/userStorage.js';
 
 const router = useRouter();
 
-const appVersion = ref('1.0.0');
+const appVersion = ref('1.0.1');
 
 const defaultSettings = {
     apiBaseUrl: 'https://api.openai.com/v1',

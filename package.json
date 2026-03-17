@@ -1,6 +1,6 @@
 {
     "name": "ai-assistant-desktop",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "AI桌面助手 - Electron + Vue 3",
     "author": "Riko",
     "license": "MIT",

@@ -194,7 +194,7 @@ const handleCommand = async (command) => {
             break;
         case 'about':
             ElMessageBox.alert(
-                'AI 助手 v1.0.0\n\n基于 Electron + Vue 3 + Element Plus 构建\n\n作者：Riko',
+                'AI 助手 v1.0.1\n\n基于 Electron + Vue 3 + Element Plus 构建\n\n作者：Riko',
                 '关于',
                 { confirmButtonText: '确定' }
             );
