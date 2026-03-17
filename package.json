@@ -27,14 +27,17 @@
     "devDependencies": {
         "@vitejs/plugin-vue": "^5.0.0",
         "concurrently": "^8.2.2",
-        "electron": "^28.1.0",
-        "electron-builder": "^24.9.1",
+        "electron": "40.8.2",
+        "electron-builder": "^26.8.1",
         "vite": "^5.0.10",
         "wait-on": "^7.2.0"
     },
     "build": {
         "appId": "com.riko.ai-assistant",
         "productName": "AI助手--By Riko",
+        "electronDownload": {
+            "cache": "C:/Users/admin/AppData/Local/electron/Cache"
+        },
         "directories": {
             "output": "dist_electron"
         },

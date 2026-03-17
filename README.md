@@ -40,7 +40,7 @@
 ## 技术栈
 
 - **前端框架**：Vue 3 + Composition API
-- **桌面框架**：Electron 28
+- **桌面框架**：Electron 40
 - **构建工具**：Vite 5
 - **UI 组件库**：Element Plus
 - **状态管理**：Pinia
@@ -48,7 +48,7 @@
 ## 安装运行
 
 ### 环境要求
-- Node.js 18+
+- Node.js 22+
 - npm 9+
 
 ### 安装依赖
