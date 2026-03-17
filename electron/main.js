@@ -28,8 +28,8 @@ let tray = null;
 let rulerWindow = null;
 let pickerWindow = null;
 
-// 用户数据存储路径（项目根目录下的 userData 文件夹）
-const userDataPath = path.join(__dirname, '../userData');
+// 用户数据存储路径（使用系统用户数据目录）
+const userDataPath = path.join(app.getPath('userData'), 'userData');
 const configPath = path.join(userDataPath, 'config.json');
 
 // 当前登录用户
