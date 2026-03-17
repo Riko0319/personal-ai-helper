@@ -1,0 +1,59 @@
+{
+    "name": "ai-assistant-desktop",
+    "version": "1.0.0",
+    "description": "AI桌面助手 - Electron + Vue 3",
+    "author": "Riko",
+    "license": "MIT",
+    "type": "module",
+    "main": "electron/main.js",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "electron:dev": "concurrently \"vite\" \"wait-on http://localhost:5173 && electron .\"",
+        "electron:build": "vite build && electron-builder",
+        "electron:preview": "vite build && electron ."
+    },
+    "dependencies": {
+        "@element-plus/icons-vue": "^2.3.1",
+        "axios": "^1.6.2",
+        "element-plus": "^2.4.4",
+        "highlight.js": "^11.9.0",
+        "marked": "^11.1.0",
+        "pinia": "^2.1.7",
+        "vue": "^3.4.0",
+        "vue-router": "^4.2.5"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^5.0.0",
+        "concurrently": "^8.2.2",
+        "electron": "^28.1.0",
+        "electron-builder": "^24.9.1",
+        "vite": "^5.0.10",
+        "wait-on": "^7.2.0"
+    },
+    "build": {
+        "appId": "com.riko.ai-assistant",
+        "productName": "AI助手--By Riko",
+        "directories": {
+            "output": "dist_electron"
+        },
+        "files": [
+            "dist/**/*",
+            "electron/**/*",
+            "electron/**/*.cjs"
+        ],
+        "win": {
+            "icon": "build/icon.ico",
+            "target": [
+                "nsis",
+                "zip"
+            ]
+        },
+        "nsis": {
+            "oneClick": false,
+            "perMachine": false,
+            "allowToChangeInstallationDirectory": true
+        }
+    }
+}
