@@ -30,7 +30,6 @@ jobs:
               with:
                   name: build-artifacts
                   path: |
-                      dist_electron/*.exe
                       dist_electron/*.zip
 
             - name: Create Release
@@ -38,7 +37,6 @@ jobs:
               if: startsWith(github.ref, 'refs/tags/')
               with:
                   files: |
-                      dist_electron/*.exe
                       dist_electron/*.zip
                   draft: false
                   prerelease: false

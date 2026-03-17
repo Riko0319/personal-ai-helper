@@ -44,19 +44,14 @@
         "files": [
             "dist/**/*",
             "electron/**/*",
-            "electron/**/*.cjs"
+            "electron/**/*.cjs",
+            "build/**/*"
         ],
         "win": {
             "icon": "build/icon.ico",
             "target": [
-                "nsis",
                 "zip"
             ]
-        },
-        "nsis": {
-            "oneClick": false,
-            "perMachine": false,
-            "allowToChangeInstallationDirectory": true
         }
     }
 }

@@ -18,6 +18,11 @@ export default defineConfig({
         outDir: 'dist',
         assetsDir: 'assets',
         rollupOptions: {
+            input: {
+                main: path.resolve(__dirname, 'index.html'),
+                ruler: path.resolve(__dirname, 'ruler-overlay.html'),
+                picker: path.resolve(__dirname, 'picker-overlay.html')
+            },
             output: {
                 manualChunks: {
                     'element-plus': ['element-plus'],
