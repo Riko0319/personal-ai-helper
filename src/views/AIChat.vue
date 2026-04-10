@@ -166,7 +166,6 @@ const inputMessage = ref('');
 const loading = ref(false);
 const showConfigDialog = ref(false);
 
-console.log(123);
 const messages = ref([
     {
         role: 'assistant',
