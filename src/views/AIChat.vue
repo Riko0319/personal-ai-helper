@@ -166,6 +166,7 @@ const inputMessage = ref('');
 const loading = ref(false);
 const showConfigDialog = ref(false);
 
+console.log(123);
 const messages = ref([
     {
         role: 'assistant',
@@ -234,7 +235,7 @@ const sendMessage = async () => {
         // 使用 Agent 系统处理消息
         const agent = new Agent(apiConfig);
         agent.setMessages(messages.value);
-        
+
         const assistantMessage = await agent.processUserMessage(userMessage);
 
         // 添加助手消息
