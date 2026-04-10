@@ -155,6 +155,7 @@ import {
     loadUserData,
     STORAGE_KEYS
 } from '@/utils/userStorage.js';
+import { Agent } from '@/utils/agent/index.js';
 
 import hljs from 'highlight.js';
 import 'highlight.js/styles/github-dark.css';
@@ -230,29 +231,11 @@ const sendMessage = async () => {
     loading.value = true;
 
     try {
-        // 调用 AI API
-        const response = await fetch(`${apiConfig.baseUrl}/chat/completions`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                Authorization: `Bearer ${apiConfig.apiKey}`
-            },
-            body: JSON.stringify({
-                model: apiConfig.model,
-                messages: messages.value.map((m) => ({
-                    role: m.role,
-                    content: m.content
-                })),
-                stream: false
-            })
-        });
-
-        if (!response.ok) {
-            throw new Error(`API 请求失败: ${response.status}`);
-        }
-
-        const data = await response.json();
-        const assistantMessage = data.choices[0].message.content;
+        // 使用 Agent 系统处理消息
+        const agent = new Agent(apiConfig);
+        agent.setMessages(messages.value);
+        
+        const assistantMessage = await agent.processUserMessage(userMessage);
 
         // 添加助手消息
         messages.value.push({

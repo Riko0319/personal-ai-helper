@@ -22,7 +22,8 @@
         "marked": "^11.1.0",
         "pinia": "^2.1.7",
         "vue": "^3.4.0",
-        "vue-router": "^4.2.5"
+        "vue-router": "^4.2.5",
+        "xlsx": "^0.18.5"
     },
     "devDependencies": {
         "@vitejs/plugin-vue": "^5.0.0",
